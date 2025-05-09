@@ -1,0 +1,131 @@
+.character-selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: helvetica, sans-serif;
+    transition: opacity 0.5s ease;
+}
+
+.character-sprite-container-current:hover canvas {
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+    transform: scale(1.1);
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+
+.character-sprite-container-current {
+    cursor: pointer;
+}
+
+
+.character-sprite-container-current:not(.character-locked):hover canvas {
+    filter: brightness(1.3) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+}
+
+
+.character-sprite-container-current.character-locked:hover canvas {
+    filter: grayscale(80%) brightness(1.1) drop-shadow(0 0 5px rgba(150, 150, 150, 0.5));
+}
+
+.character-selection h2 {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.character-selection h3 {
+    margin: 10px 0 5px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.character-selection p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.pixel-arrow {
+    transition: transform 0.2s ease;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.pixel-arrow:hover {
+    transform: scale(1.2);
+}
+
+.pixel-arrow.left {
+    transform-origin: right center;
+}
+
+.pixel-arrow.right {
+    transform-origin: left center;
+}
+
+/* Highlight effect for clickable character */
+.character-selection .character-container {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.character-selection .character-container:hover {
+    transform: scale(1.1);
+}
+
+.title-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 20;
+    transition: opacity 1s ease;
+}
+
+/* Add this to the end of your characterselection.css file */
+@keyframes shake {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    10% { transform: translate(-50%, -50%) rotate(-2deg); }
+    20% { transform: translate(-50%, -50%) rotate(2deg); }
+    30% { transform: translate(-50%, -50%) rotate(-2deg); }
+    40% { transform: translate(-50%, -50%) rotate(2deg); }
+    50% { transform: translate(-50%, -50%) rotate(-2deg); }
+    60% { transform: translate(-50%, -50%) rotate(2deg); }
+    70% { transform: translate(-50%, -50%) rotate(-2deg); }
+    80% { transform: translate(-50%, -50%) rotate(2deg); }
+    90% { transform: translate(-50%, -50%) rotate(-2deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Add a class for locked character styling */
+.character-locked {
+    filter: grayscale(100%) opacity(0.7);
+}
+
+/* Message styling for locked character notification */
+.locked-message {
+    color: #FF5555;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
