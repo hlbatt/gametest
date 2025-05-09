@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Normal</title>
+        <link rel="stylesheet" href="https://use.typekit.net/sfz6sza.css">
+        <link href="/styles/global.css" type="text/css" rel="stylesheet">
+        <link href="/styles/TextMessage.css" type="text/css" rel="stylesheet">
+        <link href="/styles/SceneTransition.css" type="text/css" rel="stylesheet">
+        <link href="/styles/music-player.css" type="text/css" rel="stylesheet">
+        <link href="/styles/inventory.css" type="text/css" rel="stylesheet">
+        <link href="/styles/characterselection.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body>
+     <div class="game-container">
+        <canvas class="game-canvas" width="352" height="198"></canvas>
+     </div>
+
+     <div class="music-player">
+        <div class="album-container">
+          <div class="album-cover">
+            <img src="/images/Mr.Hood.png" alt="Album Cover">
+          </div>
+        </div>
+        
+        <div class="track-info">
+          <div class="title-container">
+            <h3 class="track-title">Track Title</h3>
+          </div>
+          <p class="artist-name">KMD</p>
+          <p class="release-year">1991</p>
+          
+          <div class="timeline-container">
+            <div class="timeline">
+              <div class="progress"></div>
+            </div>
+            <div class="time-display">
+              <span class="current-time">0:00</span>
+              <span class="total-time">0:00</span>
+            </div>
+          </div>
+          
+          <div class="playback-controls">
+            <button class="control-btn rewind">⏮</button>
+            <button class="control-btn play-pause">⏯</button>
+            <button class="control-btn skip">⏭</button>
+          </div>
+        </div>
+        
+        <div class="volume-container">
+          <input type="range" min="0" max="100" value="80" class="volume-slider">
+          <div class="volume-icon">🔊</div>
+        </div>
+      </div>
+
+      <div class="inventory-container">
+        <div class="inventory-slots">
+          <div class="inventory-slot" data-slot="0"></div>
+          <div class="inventory-slot" data-slot="1"></div>
+          <div class="inventory-slot" data-slot="2"></div>
+          <div class="inventory-slot" data-slot="3"></div>
+          <div class="inventory-slot" data-slot="4"></div>
+          <div class="inventory-slot" data-slot="5"></div>
+        </div>
+      </div>
+     
+    <script src="/utils.js"></script>
+    <script src="/directionInput.js"></script>
+    <script src="/GameObject.js"></script>
+    <script src="/person.js"></script>
+     <script src="/sprite.js"></script>
+     <script src="/CharacterSelection.js"></script>
+     <script src="/CollectableItem.js"></script>
+     <script src="/TextMessage.js"></script>
+     <script src="/TutorialUI.js"></script>
+     <script src="/OverworldMap.js"></script>
+     <script src="/OverworldEvent.js"></script>
+     <script src="/overworld.js"></script>
+     <script src="/KeyPressListener.js"></script>
+     <script src="/RevealingText.js"></script>
+     <script src="/SceneTransition.js"></script>
+     <script src="/inventory.js"></script>
+     <script src="/init.js"></script>
+     <script src="/music-player.js"></script>
+    </body>
+</html>
